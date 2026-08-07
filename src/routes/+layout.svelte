@@ -1,7 +1,43 @@
 <script>
   import '../style.css';
-  const nav = [['/', 'Home'], ['/about', 'About'], ['/news', 'News'], ['/results', 'Results'], ['/learning-platform', 'Learning Platform'], ['/contact', 'Contact']];
+  import { project, moodleUrl } from '$lib/content.js';
+
+  const nav = [
+    ['/', 'Home'],
+    ['/about', 'About'],
+    ['/news', 'News'],
+    ['/results', 'Results'],
+    ['/learning-platform', 'Learning Platform'],
+    ['/contact', 'Contact']
+  ];
 </script>
-<header><a class="logo" href="/">NURSE<span>LABS</span></a><nav>{#each nav as n}<a href={n[0]}>{n[1]}</a>{/each}</nav></header>
+<header>
+  <a class="brand" href="/" aria-label="NURSE-LABS home">
+    <img src="/logo.png" alt="" />
+    <span>NURSE-LABS</span>
+  </a>
+  <nav aria-label="Main navigation">
+    {#each nav as n}
+      <a href={n[0]}>{n[1]}</a>
+    {/each}
+  </nav>
+</header>
 <slot />
-<footer><div><b>NURSE-LABS</b><p>European Erasmus+ KA220-VET Project for chronic vision adherence counselling.</p></div><p>Partners · Privacy Policy · Accessibility · GDPR · Erasmus+ Disclaimer</p></footer>
+<footer>
+  <div class="footer-grid">
+    <div>
+      <b>{project.name}</b>
+      <p>Project No. {project.number}</p>
+      <p>Coordinator: OFTHALMOLOGIKO KENTRO PANTHEO LTD</p>
+      <p>{project.fundingDisclaimer}</p>
+    </div>
+    <div>
+      <b>Links</b>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/gdpr-cookie">Cookie / GDPR information</a>
+      <a href="/accessibility">Accessibility Statement</a>
+      <a href={moodleUrl}>Learning Platform</a>
+    </div>
+  </div>
+  <p class="copyright">Copyright &copy; NURSE-LABS consortium. All rights reserved.</p>
+</footer>

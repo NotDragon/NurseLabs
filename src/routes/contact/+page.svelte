@@ -1,2 +1,32 @@
-<section class="page"><p>Contact</p><h1>Pantheo Ophthalmology Centre</h1></section>
-<section class="platform"><div><h2>Coordinator</h2><p>Email: info@example.org</p><p>Phone: +357 00000000</p><p>Address: Cyprus</p><p>Social Media: LinkedIn · X · Facebook</p></div><figure>Google Map</figure></section>
+<section class="page">
+  <p>Contact Us</p>
+  <h1>NURSE-LABS Project Coordinator</h1>
+</section>
+<section class="platform">
+  <div>
+    <h2>Project Contact</h2>
+    <p><b>NURSE-LABS Project Coordinator</b></p>
+    <p>OFTHALMOLOGIKO KENTRO PANTHEO LTD / Pantheo Eye Center</p>
+    <p>For general information about the NURSE-LABS project, project activities, dissemination, collaboration opportunities or access to public project results, please contact the coordinating organisation.</p>
+  </div>
+  <div class="contact-card">
+    <h2>Contact Information</h2>
+    <p>Pantheo Eye Center<br />18 Robert Kennedy Street<br />3076 Limassol<br />Cyprus</p>
+    <p>Telephone: <a href="tel:+35725735353">+357 25 735353</a></p>
+    <p>Fax: +357 25 732266</p>
+    <p>General Information: <a href="mailto:contact@pantheo.com">contact@pantheo.com</a></p>
+    <p><b>Opening Hours:</b><br />Monday to Friday: 07:30 - 18:00</p>
+    <p><b>Emergency On Call - Saturday & Sunday:</b><br /><a href="tel:+35799384114">+357 99 384114</a></p>
+  </div>
+</section>
+
+<section>
+  <h2>Find Us</h2>
+  <a class="btn" href="https://maps.app.goo.gl/Xv8CUXjXSULEtGUj6" target="_blank" rel="noreferrer">Find Pantheo Eye Center on Google Maps</a>
+</section>
+
+<section class="cta">
+  <h2>Offline Map Download</h2>
+  <p>For visitors who may not have Google Maps installed or who may not have internet access while travelling, an offline map of the Pantheo Eye Center location can be downloaded in advance and opened directly on a mobile device.</p>
+  <a class="btn" href="/pantheo-offline-map.pdf" download>DOWNLOAD MAP</a>
+</section>
