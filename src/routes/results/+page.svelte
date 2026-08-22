@@ -1,15 +1,17 @@
 <script>
-  import { resultCategories } from '$lib/content.js';
+  import { Download } from '@lucide/svelte';
+  import { projectResults } from '$lib/content.js';
 </script>
 
 <section class="page">
   <p>Results</p>
-  <h1>Public project repository.</h1>
+  <h1>Deliverables and public project results.</h1>
 </section>
 
 <section class="repository">
   <h2>Expandable Repository</h2>
-  {#each resultCategories as result}
+  <p class="wide-text">Approved public outputs will be added here throughout the project lifecycle. Download links will only appear once each deliverable or result has been cleared for public dissemination.</p>
+  {#each projectResults as result}
     <details>
       <summary>
         <span>{result.title}</span>
@@ -17,15 +19,19 @@
       </summary>
       <p>{result.description}</p>
       <div class="download-card forthcoming">
-        <h3>Public outputs</h3>
+        <h3>{result.title}</h3>
         <dl>
-          <div><dt>Output title</dt><dd>Forthcoming</dd></div>
-          <div><dt>Work Package</dt><dd>Forthcoming</dd></div>
-          <div><dt>Publication date</dt><dd>Forthcoming</dd></div>
-          <div><dt>Language</dt><dd>Forthcoming</dd></div>
-          <div><dt>File type</dt><dd>Forthcoming</dd></div>
+          <div><dt>Output title</dt><dd>{result.title}</dd></div>
+          <div><dt>Work Package</dt><dd>{result.workPackage}</dd></div>
+          <div><dt>Status</dt><dd>{result.status}</dd></div>
+          <div><dt>Publication date</dt><dd>{result.publicationDate}</dd></div>
+          <div><dt>Output type</dt><dd>{result.type}</dd></div>
         </dl>
-        <button class="btn" type="button" disabled>Download unavailable</button>
+        {#if result.downloadUrl}
+          <a class="btn" href={result.downloadUrl} download><Download size={18} /> Download</a>
+        {:else}
+          <button class="btn" type="button" disabled><Download size={18} /> Download forthcoming</button>
+        {/if}
       </div>
     </details>
   {/each}

@@ -145,43 +145,73 @@ export const workPackages = [
   }
 ];
 
-export const resultCategories = [
+export const projectResults = [
   {
     title: 'European Competence Framework',
+    workPackage: 'WP2',
     status: 'Forthcoming',
-    description: 'Validated competence framework outputs will be published here when approved for public release.'
+    publicationDate: 'Forthcoming',
+    type: 'Framework',
+    description: 'Validated competence framework outputs will be published here when approved for public release.',
+    downloadUrl: ''
   },
   {
     title: 'Curriculum & EQF Resources',
+    workPackage: 'WP3',
     status: 'Forthcoming',
-    description: 'Curriculum, learning outcomes, assessment and EQF alignment resources will be added when available.'
+    publicationDate: 'Forthcoming',
+    type: 'Curriculum package',
+    description: 'Curriculum, learning outcomes, assessment and EQF alignment resources will be added when available.',
+    downloadUrl: ''
   },
   {
     title: 'Digital Learning & Simulation Resources',
+    workPackage: 'WP4',
     status: 'Forthcoming',
-    description: 'Approved digital learning and simulation resources will be listed here.'
+    publicationDate: 'Forthcoming',
+    type: 'Digital resources',
+    description: 'Approved digital learning and simulation resources will be listed here.',
+    downloadUrl: ''
   },
   {
     title: 'Pilot & Impact Results',
+    workPackage: 'WP5',
     status: 'Forthcoming',
-    description: 'Pilot implementation and impact evaluation outputs will be published after approval.'
+    publicationDate: 'Forthcoming',
+    type: 'Evaluation report',
+    description: 'Pilot implementation and impact evaluation outputs will be published after approval.',
+    downloadUrl: ''
   },
   {
     title: 'Policy & CPD Resources',
+    workPackage: 'WP6',
     status: 'Forthcoming',
-    description: 'Policy recommendations and CPD pathway resources will be made available here.'
+    publicationDate: 'Forthcoming',
+    type: 'Policy and CPD resource',
+    description: 'Policy recommendations and CPD pathway resources will be made available here.',
+    downloadUrl: ''
   },
   {
     title: 'Sustainability & Exploitation',
+    workPackage: 'WP6',
     status: 'Forthcoming',
-    description: 'Sustainability, exploitation and Community of Practice resources will be published here.'
+    publicationDate: 'Forthcoming',
+    type: 'Sustainability output',
+    description: 'Sustainability, exploitation and Community of Practice resources will be published here.',
+    downloadUrl: ''
   },
   {
     title: 'Dissemination Resources',
+    workPackage: 'WP6',
     status: 'Forthcoming',
-    description: 'Newsletters, presentations, event materials, infographics and approved videos.'
+    publicationDate: 'Forthcoming',
+    type: 'Public dissemination material',
+    description: 'Newsletters, presentations, event materials, infographics and approved videos.',
+    downloadUrl: ''
   }
 ];
+
+export const resultCategories = projectResults;
 
 export const platformFeatures = [
   'Structured learning modules',

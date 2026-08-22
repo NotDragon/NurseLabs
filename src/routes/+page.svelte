@@ -1,8 +1,28 @@
 <script>
-  import { BookOpen, Eye, Landmark, MonitorPlay, Network, ShieldCheck } from '@lucide/svelte';
-  import { facts, moodleUrl, news, objectives, partners, project } from '$lib/content.js';
+  import { BookOpen, Download, Eye, Landmark, MonitorPlay, Network, ShieldCheck } from '@lucide/svelte';
+  import { facts, moodleUrl, news, objectives, partners, project, projectResults } from '$lib/content.js';
 
   const icons = [Eye, ShieldCheck, BookOpen, MonitorPlay, Network, Landmark];
+  const visualOptions = [
+    {
+      label: 'A',
+      title: 'Blue + gold + white',
+      text: 'Bright clinical base with gold accents and a high-clarity eye and retina image.',
+      className: 'option-a'
+    },
+    {
+      label: 'B',
+      title: 'Blue + cyan + yellow',
+      text: 'More digital and contemporary, with cyan visual pathways and soft yellow signal points.',
+      className: 'option-b'
+    },
+    {
+      label: 'C',
+      title: 'Navy + aqua + warm gold',
+      text: 'More institutional and European, retaining depth while reducing the previous dark-blue dominance.',
+      className: 'option-c'
+    }
+  ];
 </script>
 <section class="hero">
   <div class="hero-copy">
@@ -22,10 +42,27 @@
       <a class="btn ghost" href="/learning-platform">Access Learning Platform</a>
     </div>
   </div>
-  <aside>
-    <img src="/logo.png" alt="" />
-    <span>European competence-based vocational training</span>
+  <aside class="hero-visual" aria-label="Ophthalmology-inspired digital vision artwork">
+    <span>Eye, retina, OCT and digital vision pathways</span>
   </aside>
+</section>
+
+<section class="visual-directions" aria-labelledby="visual-directions-title">
+  <div class="section-heading">
+    <p>Visual identity options</p>
+    <h2 id="visual-directions-title">Homepage hero variations for review</h2>
+  </div>
+  <div class="variation-grid">
+    {#each visualOptions as option}
+      <article class={`variation-card ${option.className}`}>
+        <div class="variation-preview">
+          <span>{option.label}</span>
+        </div>
+        <h3>{option.title}</h3>
+        <p>{option.text}</p>
+      </article>
+    {/each}
+  </div>
 </section>
 <section class="intro">
   <h2>About the Project</h2>
@@ -52,6 +89,34 @@
       </article>
     {/each}
   </div>
+</section>
+
+<section class="deliverables-home">
+  <div class="section-heading">
+    <p>Deliverables / Project Results</p>
+    <h2>Public project outputs</h2>
+  </div>
+  <div class="result-strip">
+    {#each projectResults.slice(0, 4) as result}
+      <details>
+        <summary>
+          <span>{result.title}</span>
+          <strong>{result.status}</strong>
+        </summary>
+        <p>{result.description}</p>
+        <dl>
+          <div><dt>Work Package</dt><dd>{result.workPackage}</dd></div>
+          <div><dt>Publication date</dt><dd>{result.publicationDate}</dd></div>
+        </dl>
+        {#if result.downloadUrl}
+          <a class="btn small" href={result.downloadUrl} download><Download size={16} /> Download</a>
+        {:else}
+          <button class="btn small" type="button" disabled><Download size={16} /> Forthcoming</button>
+        {/if}
+      </details>
+    {/each}
+  </div>
+  <a class="btn ghost" href="/results">View All Results</a>
 </section>
 
 <section class="cta">
