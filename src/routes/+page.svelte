@@ -1,8 +1,6 @@
 <script>
-  import { BookOpen, Download, Eye, Landmark, MonitorPlay, Network, ShieldCheck } from '@lucide/svelte';
   import { facts, moodleUrl, news, objectives, partners, project, projectResults } from '$lib/content.js';
 
-  const icons = [Eye, ShieldCheck, BookOpen, MonitorPlay, Network, Landmark];
   const visualOptions = [
     {
       label: 'A',
@@ -83,7 +81,7 @@
   <div class="objectives">
     {#each objectives as o, i}
       <article>
-        <svelte:component this={icons[i]} />
+        <span class="objective-icon" aria-hidden="true">{i + 1}</span>
         <h3>{o.title}</h3>
         <p>{o.text}</p>
       </article>
@@ -109,9 +107,9 @@
           <div><dt>Publication date</dt><dd>{result.publicationDate}</dd></div>
         </dl>
         {#if result.downloadUrl}
-          <a class="btn small" href={result.downloadUrl} download><Download size={16} /> Download</a>
+          <a class="btn small download" href={result.downloadUrl} download>Download</a>
         {:else}
-          <button class="btn small" type="button" disabled><Download size={16} /> Forthcoming</button>
+          <button class="btn small download" type="button" disabled>Forthcoming</button>
         {/if}
       </details>
     {/each}

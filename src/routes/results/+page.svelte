@@ -1,5 +1,4 @@
 <script>
-  import { Download } from '@lucide/svelte';
   import { projectResults } from '$lib/content.js';
 </script>
 
@@ -28,9 +27,9 @@
           <div><dt>Output type</dt><dd>{result.type}</dd></div>
         </dl>
         {#if result.downloadUrl}
-          <a class="btn" href={result.downloadUrl} download><Download size={18} /> Download</a>
+          <a class="btn download" href={result.downloadUrl} download>Download</a>
         {:else}
-          <button class="btn" type="button" disabled><Download size={18} /> Download forthcoming</button>
+          <button class="btn download" type="button" disabled>Download forthcoming</button>
         {/if}
       </div>
     </details>

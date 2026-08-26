@@ -13,7 +13,7 @@
 </script>
 <header>
   <a class="brand" href="/" aria-label="NURSE-LABS home">
-    <img src="/logo.png" alt="" />
+    <img src="/logo-header.png" alt="" width="144" height="96" decoding="async" />
     <span>NURSE-LABS</span>
   </a>
   <nav aria-label="Main navigation">
