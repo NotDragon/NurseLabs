@@ -1,26 +1,5 @@
 <script>
   import { facts, moodleUrl, news, objectives, partners, project, projectResults } from '$lib/content.js';
-
-  const visualOptions = [
-    {
-      label: 'A',
-      title: 'Blue + gold + white',
-      text: 'Bright clinical base with gold accents and a high-clarity eye and retina image.',
-      className: 'option-a'
-    },
-    {
-      label: 'B',
-      title: 'Blue + cyan + yellow',
-      text: 'More digital and contemporary, with cyan visual pathways and soft yellow signal points.',
-      className: 'option-b'
-    },
-    {
-      label: 'C',
-      title: 'Navy + aqua + warm gold',
-      text: 'More institutional and European, retaining depth while reducing the previous dark-blue dominance.',
-      className: 'option-c'
-    }
-  ];
 </script>
 <section class="hero">
   <div class="hero-copy">
@@ -45,21 +24,12 @@
   </aside>
 </section>
 
-<section class="visual-directions" aria-labelledby="visual-directions-title">
+<section class="image-feature" aria-labelledby="competence-title">
+  <img src="/section-competence-framework.webp" alt="Nurses reviewing chronic vision care training materials in a clinical education room" />
   <div class="section-heading">
-    <p>Visual identity options</p>
-    <h2 id="visual-directions-title">Homepage hero variations for review</h2>
-  </div>
-  <div class="variation-grid">
-    {#each visualOptions as option}
-      <article class={`variation-card ${option.className}`}>
-        <div class="variation-preview">
-          <span>{option.label}</span>
-        </div>
-        <h3>{option.title}</h3>
-        <p>{option.text}</p>
-      </article>
-    {/each}
+    <p>Competence-based training</p>
+    <h2 id="competence-title">From clinical evidence to practical nursing competence</h2>
+    <p>NURSE-LABS connects ophthalmology, nursing education and health literacy into a structured model for chronic vision counselling and medication adherence support.</p>
   </div>
 </section>
 <section class="intro">
@@ -89,6 +59,16 @@
   </div>
 </section>
 
+<section class="image-feature reverse" aria-labelledby="simulation-title">
+  <img src="/section-digital-simulation.webp" alt="Nurse using a digital simulation for chronic vision care training" />
+  <div class="section-heading">
+    <p>Digital simulation</p>
+    <h2 id="simulation-title">Practice patient communication before clinical implementation</h2>
+    <p>The learning ecosystem will support scenario-based practice, structured assessment and competence tracking for nurses working with chronic vision conditions.</p>
+    <a class="btn ghost" href="/learning-platform">View Platform Plan</a>
+  </div>
+</section>
+
 <section class="deliverables-home">
   <div class="section-heading">
     <p>Deliverables / Project Results</p>
@@ -115,6 +95,16 @@
     {/each}
   </div>
   <a class="btn ghost" href="/results">View All Results</a>
+</section>
+
+<section class="image-feature" aria-labelledby="pilot-title">
+  <img src="/section-pilot-results.webp" alt="Project team reviewing pilot implementation results in a healthcare education setting" />
+  <div class="section-heading">
+    <p>Pilot and evidence</p>
+    <h2 id="pilot-title">Public outputs will follow validation and pilot activity</h2>
+    <p>Approved frameworks, curriculum resources, simulation materials and evaluation results will be published as they become available during the project lifecycle.</p>
+    <a class="btn ghost" href="/results">Browse Results Repository</a>
+  </div>
 </section>
 
 <section class="cta">
