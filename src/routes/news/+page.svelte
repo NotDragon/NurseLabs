@@ -1,5 +1,5 @@
 <script>
-  import { news, newsCategories } from '$lib/content.js';
+  import { news, newsCategories, pressReleases } from '$lib/content.js';
 </script>
 
 <section class="page">
@@ -14,6 +14,24 @@
       <li>{category}</li>
     {/each}
   </ul>
+</section>
+
+<section class="press-releases">
+  <div class="section-heading">
+    <p>Press releases</p>
+    <h2>Official project announcements</h2>
+    <p>Download the available Word document press releases prepared by project partners.</p>
+  </div>
+  <div class="press-grid">
+    {#each pressReleases as release}
+      <article>
+        <p class="tag">{release.country}</p>
+        <h3>{release.title}</h3>
+        <p>{release.partner}</p>
+        <a class="btn small download" href={release.file} download>Download Word Document</a>
+      </article>
+    {/each}
+  </div>
 </section>
 
 <section class="timeline">

@@ -74,8 +74,8 @@ nav a:hover {
 }
 
 .brand img {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
   background: white;
   border-radius: 6px;
@@ -325,6 +325,7 @@ h2:before {
 
 .objectives,
 .news,
+.press-grid,
 .downloads,
 .partners {
   display: grid;
@@ -334,6 +335,7 @@ h2:before {
 
 .objectives article,
 .news article,
+.press-grid article,
 .downloads article,
 .partner-card,
 .contact-card {
@@ -346,9 +348,18 @@ h2:before {
 
 .objectives article p,
 .downloads article p,
+.press-grid article p:not(.tag),
 .news article span {
   line-height: 1.75;
   color: var(--muted);
+}
+
+.press-releases {
+  background: white;
+}
+
+.press-grid {
+  margin-top: 24px;
 }
 
 .objective-icon {
@@ -493,15 +504,22 @@ h2:before {
 .logo-block {
   display: grid !important;
   place-items: center;
-  min-height: 110px;
-  background: #eef4f6;
+  min-height: 132px;
+  background: #fff;
   color: var(--blue);
-  border: 1px dashed #a9bdc8;
-  border-top: 0;
+  border: 1px solid var(--line);
   box-shadow: none;
-  padding: 0;
+  padding: 18px;
   margin-bottom: 16px;
   font-weight: 700;
+}
+
+.logo-block img {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  max-height: 96px;
+  object-fit: contain;
 }
 
 .partner-card a {
@@ -598,6 +616,7 @@ footer {
 
   .objectives,
   .news,
+  .press-grid,
   .downloads,
   .partners {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -619,8 +638,8 @@ footer {
   }
 
   .brand img {
-    width: 42px;
-    height: 42px;
+    width: 46px;
+    height: 46px;
   }
 
   .hero {
@@ -646,6 +665,7 @@ footer {
   .metrics,
   .objectives,
   .news,
+  .press-grid,
   .downloads,
   .partners {
     grid-template-columns: 1fr;
@@ -659,6 +679,6 @@ footer {
 
   .partners span.logo-block,
   .logo-block {
-    min-height: 92px;
+    min-height: 112px;
   }
 }

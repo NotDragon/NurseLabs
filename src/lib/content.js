@@ -63,48 +63,82 @@ export const newsCategories = [
 ];
 
 export const news = /** @type {Array<{title:string,date:string,category:string,summary:string,text:string,related:string,url:string}>} */ ([]);
+
+export const pressReleases = [
+  {
+    title: 'Project Press Release - Cyprus',
+    country: 'Cyprus',
+    partner: 'Cyprus Nurses and Midwives Association (CYNMA)',
+    file: '/press_releases/Announcement%20for%20Project%20Press%20Release_Cyprus_CYNMA.docx'
+  },
+  {
+    title: 'Project Press Release - Greece',
+    country: 'Greece',
+    partner: 'COHESION NETWORK 2GETHER',
+    file: '/press_releases/Announcement%20for%20Project%20Press%20Release_greece_co2together.docx'
+  },
+  {
+    title: 'Project Press Release - Poland',
+    country: 'Poland',
+    partner: 'Pomorski Uniwersytet Medyczny w Szczecinie',
+    file: '/press_releases/Announcement%20for%20Project%20Press%20Release_Poland.docx'
+  },
+  {
+    title: 'Project Press Release - Italy',
+    country: 'Italy',
+    partner: 'Universita degli Studi di Udine',
+    file: '/press_releases/Anouncement%20of%20Project_Italy.docx'
+  }
+];
 export const partners = [
   {
     name: 'OFTHALMOLOGIKO KENTRO PANTHEO LTD',
     country: 'Cyprus',
     role: 'Project Coordinator',
-    url: 'https://pantheo.com/'
+    url: 'https://pantheo.com/',
+    logo: '/logos/pantheo-logo.png'
   },
   {
     name: 'A.N.E.V Consulting Services Ltd',
     country: 'Cyprus',
     role: '',
-    url: ''
+    url: '',
+    logo: '/logos/STEMFREAK%20logo_edited.png'
   },
   {
     name: 'Cyprus Nurses and Midwives Association (CYNMA)',
     country: 'Cyprus',
     role: '',
-    url: 'https://cyna.org/'
+    url: 'https://cyna.org/',
+    logo: ''
   },
   {
     name: 'UNIVERSITA DEGLI STUDI DI UDINE',
     country: 'Italy',
     role: '',
-    url: 'https://www.uniud.it/it'
+    url: 'https://www.uniud.it/it',
+    logo: '/logos/UNIUD_logo.jpg'
   },
   {
     name: 'POMORSKI UNIWERSYTET MEDYCZNY W SZCZECINIE',
     country: 'Poland',
     role: '',
-    url: 'https://www.pum.edu.pl/'
+    url: 'https://www.pum.edu.pl/',
+    logo: '/logos/PUM_logo_edited.jpg'
   },
   {
     name: 'COHESION NETWORK 2GETHER',
     country: 'Greece',
     role: '',
-    url: 'https://co2gether.gr/en/'
+    url: 'https://co2gether.gr/en/',
+    logo: '/logos/Co2gether.png'
   },
   {
     name: 'Πανελλήνια Επιστημονική Ένωση Εγγραμματοσύνης σε Θέματα Υγείας (HSSHL)',
     country: 'Greece',
     role: '',
-    url: ''
+    url: '',
+    logo: '/logos/%CE%A0%CE%95%CE%95%CE%9D%CE%95%CE%98%CE%A5%20VERTICAL-01_edited.jpg'
   }
 ];
 export const targetGroups = [

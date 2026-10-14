@@ -45,12 +45,20 @@
       <article class="partner-card">
         {#if p.url}
           <a href={p.url} target="_blank" rel="noreferrer">
-            <span class="logo-block">Logo</span>
+            {#if p.logo}
+              <span class="logo-block"><img src={p.logo} alt="" loading="lazy" decoding="async" /></span>
+            {:else}
+              <span class="logo-block">Logo</span>
+            {/if}
             <b>{p.name}</b>
             <small>{p.country}{p.role ? ` - ${p.role}` : ''}</small>
           </a>
         {:else}
-          <span class="logo-block">Logo</span>
+          {#if p.logo}
+            <span class="logo-block"><img src={p.logo} alt="" loading="lazy" decoding="async" /></span>
+          {:else}
+            <span class="logo-block">Logo</span>
+          {/if}
           <b>{p.name}</b>
           <small>{p.country} - official website to be confirmed</small>
         {/if}
